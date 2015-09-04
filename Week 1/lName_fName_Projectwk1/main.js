@@ -23,7 +23,16 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
 
   console.log("~~~~~START OF TARGET 2~~~~~");/*Start Target 2*/
   console.log("No console events in Target 2.");
-    $("#contentleft > ul > li").eq(1).css("marginLeft", "30px");
+    $("#contentleft > ul > li").eq(1).css("marginLeft", "30px");/*Changed the left margin of the second list item to 30px*/
   console.log("~~~~~END OF TARGET 2~~~~~");/*End Target 2*/
   console.log(" ")
+
+
+
+
+  console.log("~~~~~START OF TARGET 3~~~~~");/*Start Target 3*/
+
+  console.log("~~~~~END OF TARGET 3~~~~~");/*End Target 3*/
+  console.log(" ")
+
 });
