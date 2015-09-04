@@ -4,8 +4,8 @@ Author: Steven Carter | 0004502683
 Date: 4 September 2015
 */
 
-$(document).ready(function(){
-  $('#contentleft > ul').css('backgroundColor', 'orange');
+$(document).ready(function(){    /*Function only activates if the DOM is complete*/
+  $('#contentleft > ul').css('backgroundColor', 'orange');    /*changes the background color of the links list to orange*/
 
 
 });
