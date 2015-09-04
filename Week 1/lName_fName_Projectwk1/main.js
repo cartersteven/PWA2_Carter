@@ -5,7 +5,7 @@ Date: 4 September 2015
 */
 
 $(document).ready(function(){
-  $('#contentleft > ul').css(background-color(orange));
+  $('#contentleft > ul').css('backgroundColor', 'orange');
 
 
 });
