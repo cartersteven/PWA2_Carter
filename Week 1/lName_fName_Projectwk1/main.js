@@ -47,7 +47,7 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
 
   console.log("~~~~~START OF TARGET 4~~~~~");/*Start Target 4*/
 
-
+    
 
   console.log("~~~~~END OF TARGET 4~~~~~");/*End Target 4*/
   console.log(" ")
