@@ -34,6 +34,8 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
 
   console.log("~~~~~START OF TARGET 3~~~~~");/*Start Target 3*/
 
+    $("#contentleft > ul > li").eq(3).css("fontColor", "red");/*Set the last LI to a font color of red*/
+
     
 
   console.log("~~~~~END OF TARGET 3~~~~~");/*End Target 3*/
