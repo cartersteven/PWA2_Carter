@@ -34,9 +34,11 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
 
   console.log("~~~~~START OF TARGET 3~~~~~");/*Start Target 3*/
 
-    $("#contentleft > ul > li").eq(3).css("fontColor", "red");/*Set the last LI to a font color of red*/
+    $("#contentleft > ul > li").eq(3).css("color", "red");/*Set the last LI to a font color of red*/
 
-    
+    var notLinkWidth = $("#contentleft > ul > li").filter(":last").width();/*Set a variable called notLinkWidth to the width of the final LI, which is not a link.*/
+
+    console.log("The width of the fourth list item is " + notLinkWidth + ".");
 
   console.log("~~~~~END OF TARGET 3~~~~~");/*End Target 3*/
   console.log(" ")
