@@ -37,10 +37,18 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
     $("#contentleft > ul > li").eq(3).css("color", "red");/*Set the last LI to a font color of red*/
 
     var notLinkWidth = $("#contentleft > ul > li").filter(":last").width();/*Set a variable called notLinkWidth to the width of the final LI, which is not a link.*/
-
-    console.log("The width of the fourth list item is " + notLinkWidth + ".");
+    console.log("The width of the fourth list item is " + notLinkWidth + ".");/*logged the width of the fourth list item to the console.*/
 
   console.log("~~~~~END OF TARGET 3~~~~~");/*End Target 3*/
   console.log(" ")
 
+
+
+
+  console.log("~~~~~START OF TARGET 4~~~~~");/*Start Target 4*/
+
+
+
+  console.log("~~~~~END OF TARGET 4~~~~~");/*End Target 4*/
+  console.log(" ")
 });
