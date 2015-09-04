@@ -47,7 +47,13 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
 
   console.log("~~~~~START OF TARGET 4~~~~~");/*Start Target 4*/
 
-    
+    $("#contentright > h3").css("float", "right").addClass("listhead");
+
+    var hasListHead = $("#contentright > h3").hasClass("listhead");
+    if(hasListHead === true){
+      console.log("H3 tag has the listhead class")
+    } else {
+      console.log("H3 tag does not have the listhead class")};
 
   console.log("~~~~~END OF TARGET 4~~~~~");/*End Target 4*/
   console.log(" ")
