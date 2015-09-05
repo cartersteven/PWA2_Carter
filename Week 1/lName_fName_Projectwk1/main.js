@@ -62,6 +62,7 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
 
 
   console.log("~~~~~START OF TARGET 5~~~~~");/*Start Target 5*/
+  console.log("No console events in Target 5.");
 
     $( "#contentright > ul > li" ).eq(2).children().attr( "href", "http://www.yahoo.com" );/*changed href for third list item*/
 
