@@ -16,7 +16,7 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
     console.log("The top position via position is left: " + positionViaPosition.left + ", top: " + positionViaPosition.top);/*Logs the positon to the console.*/
 
   console.log("~~~~~END OF TARGET 1~~~~~");/*End Target 1*/
-  console.log(" ")
+  console.log(" ");
 
 
 
@@ -27,7 +27,7 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
     $("#contentleft > ul > li").eq(1).css("marginLeft", "30px");/*Changed the left margin of the second list item to 30px*/
 
   console.log("~~~~~END OF TARGET 2~~~~~");/*End Target 2*/
-  console.log(" ")
+  console.log(" ");
 
 
 
@@ -40,21 +40,34 @@ $(document).ready(function(){    /*Function only activates if the DOM is complet
     console.log("The width of the fourth list item is " + notLinkWidth + ".");/*logged the width of the fourth list item to the console.*/
 
   console.log("~~~~~END OF TARGET 3~~~~~");/*End Target 3*/
-  console.log(" ")
+  console.log(" ");
 
 
 
 
   console.log("~~~~~START OF TARGET 4~~~~~");/*Start Target 4*/
 
-    $("#contentright > h3").css("float", "right").addClass("listhead");
+    $("#contentright > h3").css("float", "right").addClass("listhead");/*Added class listhead to the Target*/
 
-    var hasListHead = $("#contentright > h3").hasClass("listhead");
-    if(hasListHead === true){
+    var hasListHead = $("#contentright > h3").hasClass("listhead");/*Set variable to whether or not the class was added*/
+    if(hasListHead === true){/*If/Else statement determines if the addclass worked.*/
       console.log("H3 tag has the listhead class")
     } else {
       console.log("H3 tag does not have the listhead class")};
 
   console.log("~~~~~END OF TARGET 4~~~~~");/*End Target 4*/
-  console.log(" ")
+  console.log(" ");
+
+
+
+
+  console.log("~~~~~START OF TARGET 5~~~~~");/*Start Target 5*/
+
+    $( "#contentright > ul > li" ).eq(2).children().attr( "href", "http://www.yahoo.com" );/*changed href for third list item*/
+
+    $( "#contentright > ul > li:nth-child(n + 2)" ).children().attr( "href", "http://www.notgoogle.com" );
+
+  console.log("~~~~~END OF TARGET 5~~~~~");/*End Target 5*/
+  console.log(" ");
+
 });
