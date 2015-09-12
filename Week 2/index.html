@@ -46,8 +46,8 @@
         <h2>Sign In</h2>
         <form>
           <ul>
-            <li>Username <input name="user" type="text" required id="user" title="Username"></li>
-            <li>Password <input name="pass" type="password" required id="pass" title="Password"></li>
+            <li>Username <input name="user" type="text" required id="user" class="masterTooltip" title="Please Enter a Username"></li>
+            <li>Password <input name="pass" type="password" required id="pass" class="masterTooltip" title="Please Enter a Password"></li>
             <li>Remember Me <input name="remember" type="checkbox" id="remember" title="Remember Me"></li>
             <li><input type="submit"></li>
           </ul>
@@ -70,8 +70,19 @@
               <h2>Coffee Search</h2>
               <label for="keyword">Keyword</label><input name="search" type="text" id="keyword" title="Keyword">
               <br />
+              <br />
               <label for="month">Arrival Date:</label>
               <input type="month" name="month" id="month">
+              <br />
+              <br />
+              <label for="region">Region</label>
+              <select id="region">
+                <option value="CA">Central America</option>
+                <option value="SA">South America</option>
+                <option value="AA">Africa and Arabia</option>
+                <option value="IA">Indonesia and Asia</option>
+                <option value="I">Islands</option>
+              </select>
               <p> Sizes Available:
                 <label>
                   <input type="checkbox" name="sizes" value="1" id="sizes_0">
@@ -92,6 +103,7 @@
                   <input type="checkbox" name="sizes" value="50" id="sizes_5">
                   50lb</label>
               </p>
+              <input type="submit">
             </form>
           </div>
       </section>
