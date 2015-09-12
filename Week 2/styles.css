@@ -19,8 +19,25 @@ nav ul {
 	list-style-type: none;
 }
 nav {
-	margin: auto;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
 	display: table;
+}
+#signin {
+	width: 300px;
+	height: 250px;
+	border-radius: .9em;
+	background-color: #D3C89F;
+}
+form ul li {
+	list-style-type: none;
+	padding-top: 20px;
+}
+#signin h2 {
+	margin: auto;
+	text-align: center;
 }
 nav ul {
 	display: table-row;
@@ -38,10 +55,6 @@ nav ul li:first-of-type {
 }
 nav ul li:last-of-type {
 	border-radius: 0em .9em .9em 0em;
-}
-#subnav a {
-	text-decoration: none;
-	color: #7c5d42;
 }
 #title {
 	clear: right;
