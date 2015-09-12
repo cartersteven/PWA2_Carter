@@ -61,10 +61,10 @@ a:active{
   color: #40301f;
 }
 #subnav {
-	position: relative;
-	right: 30px;
-	top: 50px;
 	color: #7c5d42;
+	margin-top: -70px;
+	margin-right: 25px;
+	float: right;
 }
 #signin {
 	width: 300px;
@@ -90,7 +90,10 @@ a:active{
 	margin-top: 20px;
 }
 #signin h2 {
-	margin: auto;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
 	text-align: center;
 	color: #7c5d42;
 }
