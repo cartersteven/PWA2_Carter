@@ -102,11 +102,12 @@ form ul li {
   overflow: hidden;
   position: relative;
   top: 50%;
-  left: 50%auto;
+  left: 50%;
   margin-top: -200px;
   margin-left: -200px;
   z-index: 1001;
   display: none;
+  padding: 20px;
 }
 #modal .close {
   position: absolute;
