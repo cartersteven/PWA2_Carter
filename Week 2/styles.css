@@ -4,15 +4,66 @@ header img  {
 }
 header  {
 	width: 940;
-	height: 100;
-	background-color: pink;
+	height: 100px;
+	border-radius: 10px;
+	border: 1px black solid;
+	background-color: #D3C89F;
 }
 #subnav {
 	position: absolute;
-	right: 20px;
+	right: 30px;
 	top: 50px;
+	color: #7c5d42;
+}
+nav ul {
+	list-style-type: none;
+}
+nav {
+	margin: auto;
+	display: table;
+}
+nav ul {
+	display: table-row;
+}
+nav ul > li {
+	padding: .9em;
+	margin: .9em;
+	display: table-cell;
+	background-color: #D3C89F;
+	text-align: center;
+	font-size: 1.4em;
+}
+nav ul li:first-of-type {
+	border-radius: .9em 0em 0em .9em;
+}
+nav ul li:last-of-type {
+	border-radius: 0em .9em .9em 0em;
+}
+#subnav a {
+	text-decoration: none;
+	color: #7c5d42;
 }
 #title {
 	clear: right;
 	margin-left: 150px;
+	color: #7c5d42;
+}
+#title h3 {
+	margin-left: 20px;
+}
+.topnav a:link{
+  text-decoration: none;
+  color: #7c5d42;
+}
+.topnav a:visited{
+  text-decoration: none;
+  color: #7c5d42;
+}
+.topnav a:hover{
+  text-decoration: underline;
+  color: #664b34;
+}
+.topnav a:active{
+  text-decoration: underline;
+  color: #664b34;
 }
