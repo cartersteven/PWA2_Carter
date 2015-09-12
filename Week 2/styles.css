@@ -8,8 +8,11 @@ header  {
 	background-color: pink;
 }
 #subnav {
-	float: right;
+	position: absolute;
+	right: 20px;
+	top: 50px;
 }
 #title {
-	margin-left: 150;
+	clear: right;
+	margin-left: 150px;
 }
