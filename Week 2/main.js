@@ -1,6 +1,6 @@
 $(document).ready(function(){
   /* Tabs Action */
-  $('#tabs p:not(:first)').hide();
+  $('#search').hide();
 
   $('#aboutli').click(function(e){
     e.preventDefault();
