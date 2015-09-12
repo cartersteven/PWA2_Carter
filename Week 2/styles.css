@@ -20,6 +20,9 @@ nav ul {
 	display: table-row;
 	list-style-type: none;
 }
+.current{
+  display: none;
+}
 #tabnav {
 	width: 620px;
 	height: 30px;
@@ -102,6 +105,11 @@ form ul li {
 	margin-bottom: auto;
 	text-align: center;
 	color: #7c5d42;
+}
+#content {
+	padding-top: 0px;
+	padding-right: 30px;
+	padding-left: 30px;
 }
 #tabs {
 	width: 620px;
