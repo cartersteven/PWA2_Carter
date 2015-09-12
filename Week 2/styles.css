@@ -9,9 +9,6 @@ header  {
 	border: 1px black solid;
 	background-color: #D3C89F;
 }
-nav ul {
-	list-style-type: none;
-}
 nav {
 	margin-top: 20px;
 	margin-right: auto;
@@ -19,12 +16,18 @@ nav {
 	margin-bottom: auto;
 	display: table;
 }
-form ul li {
-	list-style-type: none;
-	padding-top: 20px;
-}
 nav ul {
 	display: table-row;
+	list-style-type: none;
+}
+#tabnav {
+	width: 620px;
+	height: 30px;
+	list-style-type: none;
+}
+#tabnav li {
+	padding: 20px;
+	display: inline;
 }
 nav ul > li {
 	padding: .9em;
@@ -60,6 +63,23 @@ a:active{
   text-decoration: underline;
   color: #40301f;
 }
+form ul li {
+	list-style-type: none;
+	padding-top: 20px;
+}
+#container {
+	margin: auto;
+	width: 960px;
+}
+#title {
+	clear: right;
+	margin-left: 150px;
+	color: #7c5d42;
+	margin-top: -15px;
+}
+#title h3 {
+	margin-left: 20px;
+}
 #subnav {
 	color: #7c5d42;
 	margin-top: -70px;
@@ -75,9 +95,13 @@ a:active{
 	background-color: #D3C89F;
 	float: left;
 }
-#container {
-	margin: auto;
-	width: 960px;
+#signin h2 {
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	text-align: center;
+	color: #7c5d42;
 }
 #tabs {
 	width: 620px;
@@ -88,21 +112,4 @@ a:active{
 	float: right;
 	clear: none;
 	margin-top: 20px;
-}
-#signin h2 {
-	margin-top: 10px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: auto;
-	text-align: center;
-	color: #7c5d42;
-}
-#title {
-	clear: right;
-	margin-left: 150px;
-	color: #7c5d42;
-	margin-top: -15px;
-}
-#title h3 {
-	margin-left: 20px;
 }
