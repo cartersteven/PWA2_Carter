@@ -28,7 +28,7 @@
       <nav>
         <ul>
           <li class="topnav">
-            <a href="#">Home</a>
+            <a href="#" class="modalClick" title="Join Today">Home</a>
           </li>
           <li class="topnav">
             <a href="#">Coffee</a>
@@ -108,8 +108,25 @@
           </div>
       </section>
 
-      <div id="slider">
-
+      <div id="overlay">
+        <div id="modal">
+          <span class="close">X</span>
+          <h3 class="modaltop">Sign Up</h3>
+          <div>
+            <form>
+              <label for="newuser"></label><input name="newuser" type="text" id="newuser" title="Username">
+              <br />
+              <br />
+              <label for="newemail"></label><input name="newemail" type="email" id="newemail" title="New Email">
+              <br />
+              <br />
+              <label for="newpass"></label><input name="newpass" type="password" id="newpass" title="New Password">
+              <br />
+              <br />
+              <input type="submit">
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
