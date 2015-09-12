@@ -61,9 +61,9 @@ nav ul li:last-of-type {
 }
 .topnav a:hover{
   text-decoration: underline;
-  color: #664b34;
+  color: #40301f;
 }
 .topnav a:active{
   text-decoration: underline;
-  color: #664b34;
+  color: #40301f;
 }
