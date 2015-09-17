@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+
+<body>
+<h2>Steven's Flickr Uploader</h2>
+    <div id="formid">
+        <form>
+            <label for="photo">Add Your Photo Here!</label>
+            <input name="photo" type="file" required id="photo" title="Add Your Photo Here!">
+            <br />
+            <br />
+            <label for="name">Name Your Photo</label>
+            <input name="name" type="text" required id="name" title="Name Your Photo" value="name">
+            <br />
+            <br />
+            <label for="description">Describe Your Photo</label>
+          <textarea name="description" id="description" title="Describe Your Photo"></textarea>
+        <h3>Who can see this photo?</h3>
+          <p>
+              <label>
+                <input type="checkbox" name="whocanview" value="public" id="whocanview_0">
+                Public</label>
+              <br>
+              <label>
+                <input type="checkbox" name="whocanview_" value="friends" id="whocanview_1">
+                Friends</label>
+              <br>
+              <label>
+                <input type="checkbox" name="whocanview_" value="family" id="whocanview_2">
+                Family</label>
+              <br>
+          </p>
+            <h3>What type of photo is it?</h3>
+          <p>
+            <label>
+              <input type="radio" name="Photo Type" value="photo" id="PhotoType_0">
+              Photo</label>
+            <br>
+            <label>
+              <input type="radio" name="Photo Type" value="screen" id="PhotoType_1">
+              Screenshot</label>
+            <br>
+            <label>
+              <input type="radio" name="Photo Type" value="other" id="PhotoType_2">
+              Other</label>
+            <br>
+          </p>
+        </form>
+    </div>
+</body>
+
+</html>
