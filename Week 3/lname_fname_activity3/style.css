@@ -24,7 +24,21 @@ body{
 	float: right;
 }
 
-h1 {
+#title {
 	text-align: center;
 	padding: 2%;
+    font-size: 3em;
+}
+
+#current {
+    width: 100%;
+    height: 300px;
+}
+
+h2 {
+    
+}
+
+#current_img {
+    height: 100%;
 }
