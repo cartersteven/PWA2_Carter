@@ -6,9 +6,8 @@ $(document).ready(function () {
                   var location = parsed_json['location']['city'];
                   var temp_f = parsed_json['current_observation']['temp_f'];
                   var currentLogo = parsed_json['current_observation']['icon_url'];
-                      $("#current_image").attr({
-  alt: "Beijing Brush Seller",
-  src: 'currentLogo'
+                      $(".conditions").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+
                       });
               } 
     	});

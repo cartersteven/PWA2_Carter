@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!--Your Name 
-	Date
-    Month
+<!--Steven Carter 
+	09/18/2015
 -->
 <html>
 <head>
-<title>Weather API App</title>
+<title>Steven's Weather API App</title>
   
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
@@ -14,13 +13,20 @@
 
 <div id="container">
   <header> 
-      <h1 id="title">Title</h1>
+      <h1 id="title">Steven's Weather App</h1>
   </header>
   
-  <div id="current">  
+  <div id="currentdiv">
+  
     <h1>Current Conditions</h1>
-      <img id="current_img" src="SVG/45.svg" />
-      <p>
+      <p id="currenttemp">
+      </p>
+      <p id="currentfeelslike"></p>
+      <h3>Humidity</h3>
+      <p id="currenthumidity"></p>
+      <h3>Wind</h3>
+      <p id="currentwind"></p>
+
       <!--  1. Display the icon for the current conditions (observation)
       		2. Display weather
             3. Display temperature in Ferinheiths
@@ -29,35 +35,100 @@
             6. Display wind direction
             7. Display wind miles per hour
       -->
-      </p>
     </div>
-    
-  <div id="hourly">
+      <div id="hourlydiv">
     <h1>Your Hourly 1-day forecast</h1>
-      <p>
+      <br />
+      <p id="forecasthourstart" ></p>
+      
+
       <!--  1. Display the Hourly 1-day forecast 
       		2. Display the condition for each hour
             3. Display the temperature for each hour
       -->
-      </p>
+
       </div>
-  <div id="week">
+    <div id="sevendaydiv">
     <h1>Your 7-day forecast</h1>
-      <p>
-      <!--	1. Display the 7-day forecast 
+      <br />
+      <p id="forecastdaystart" ></p>
+    <!--	1. Display the 7-day forecast 
       		2. Display the icon
       		3. Display weather
             4. Display highs
             5. Display lows
             6. Display conditions
       -->
-      </p>
+    </div>
 
-  </div>
+  
 </div><!--Closes Container-->
 
+<script src="jquery-1.11.3.min.js"></script>
+  <script>
 
-  <script src="jquery-1.11.3.min.js"></script>
-  <script src="main.js"></script>
+    <!--This is an example. Use your own API key and city location.  Copy and paste the url in your browser. It will display the needed information in a JSON file.  Use the keys to display the information on your page-->	
+	
+    $.ajax({                             
+    	url : "http://api.wunderground.com/api/ce24dab0c3bf6646/forecast/geolookup/conditions/q/FL/Melbourne.json",
+    	dataType : "json", 
+             success : function(parsed_json) { 
+                var location = parsed_json['location']['city']; 
+                var temp_f = parsed_json['current_observation']['temp_f'];
+                var weather_icon = parsed_json['current_observation']['icon_url'];
+                var feelsliketemp = parsed_json['current_observation']['feelslike_f'];
+                var currenthumidity = parsed_json['current_observation']['relative_humidity'];
+                var currentwindspeed = parsed_json['current_observation']['wind_mph'];
+                var currentwinddirection = parsed_json['current_observation']['wind_dir'];
+                 
+                    $("#currenttemp").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+                    $('#currentfeelslike').html('But that feels like: ' + feelsliketemp + 'ºF');
+                    $('#currenttemp').prepend('<img id="currentimg" src="' + weather_icon + '" />');
+                    $("#currenthumidity").html("The humidity here is:" + currenthumidity + "");
+                    $('#currentwind').html('Wind speed and Direction: ' + currentwindspeed + 'Mph ' + currentwinddirection);
+                 
+                 
+                    $("")
+             } 
+    }); 
+
+      
+      $.ajax({                             
+    	url : "http://api.wunderground.com/api/ce24dab0c3bf6646/hourly/q/FL/Melbourne.json",
+    	dataType : "json", 
+             success : function(parsed_json) { 
+                 
+                 for (i = 0; i < 24; i++) { 
+                     
+                     
+                     var hourimage = parsed_json['hourly_forecast'][i]['icon_url'];
+                     var hourtemp = parsed_json['hourly_forecast'][i]['temp']['english'];
+                     var ampm = parsed_json['hourly_forecast'][i]['FCTTIME']['civil'];
+                     var hourcondition = parsed_json['hourly_forecast'][i]['condition'];
+                     
+                     $("#forecasthourstart").append('<div class="hourlyforecast"><img class="hourlyforecastimage" src="' + hourimage + '" alt="' + i + '" /><p class="hourlyforecastparagraph">The Temperature will be ' + hourtemp + 'ºF at ' + ampm + '.</p><p>Expect ' + hourcondition + '</p></div>');
+                 };
+             } 
+    }); 
+      
+      
+        $.ajax({                             
+    	url : "http://api.wunderground.com/api/ce24dab0c3bf6646/forecast10day/q/FL/Melbourne.json",
+    	dataType : "json", 
+             success : function(parsed_json) { 
+                 
+                 for (i = 0; i < 7; i+2) { 
+                     
+                     
+                     var daytitle = parsed_json['forecast']['txt_forecast']['forecastday'][i+1]['title'];
+                     var dayicon = parsed_json['forecast']['txt_forecast']['forecastday'][i+1]['icon_url'];
+                     var daydescription = parsed_json['forecast']['txt_forecast']['forecastday'][i+1]['fcttext'];
+
+                     $("#forecastdaystart").append('<div class="dailyforecast"><img class="dayicon" src="' + dayicon + '" alt="' + i+1 + '" /><p class="dailyforecastparagraph">The weather will be ' + daydescription + ' on ' + daytitle + '.</p></div>');
+                 };
+             } 
+    });
+      
+  </script>
 </body>
 </html>

@@ -39,6 +39,37 @@ h2 {
     
 }
 
-#current_img {
-    height: 100%;
+#currentimg {
+    height: 50px;
+    float: left;
+    border-width: 5px;
+    border-color: black;
+    border-style:solid;
+    border-radius: 50px;
+}
+#currentfeelslike {
+    margin-top: -15px;
+    font-size: .8em;
+}
+.hourlyforecast{
+    width: 100%;
+    border: 1px solid black;
+}
+#hourlydiv {
+    width:25%;
+    float:right
+}
+
+#currentdiv {
+    width: 74%;
+    float: left;
+    padding-bottom: 5em;
+}
+
+#sevendaydiv {
+    width: 74%;
+    float: left;
+}
+.dailyforecast{
+    border: 1px solid black;
 }
