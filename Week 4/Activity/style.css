@@ -2,6 +2,24 @@
   #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
   #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
   #sortable li span { position: absolute; margin-left: -1.3em; }
-.ddcustwidth {
-    width: 500px;
+
+#dddiv {
+    width: 600px;
+    position: absolute;
+    top: 5em;
+    right: 0em;
+}
+
+#container {
+    max-width: 1200px;
+    padding:auto;
+    margin:auto;
+    text-align:center;
+}
+
+#dpdiv {
+    position: absolute;
+    width: 600px;
+    left: 0em;
+    top: 5em;
 }
