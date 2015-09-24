@@ -6,9 +6,14 @@
 </head>
     <link href="style.css" rel="stylesheet">
     <link href="jquery_ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="jquery_ui/jquery-ui.structure.min.css" rel="stylesheet">
+    <link href="jquery_ui/jquery-ui.theme.min.css" rel="stylesheet">
 <body>
-
-   <div id="dddiv" class="ddcustwidth"> 
+<div id="container">
+    
+   <h1>Favorite Ice Cream Flavors Worksheet</h1>
+    
+    <div id="dddiv"> 
        <h2>Sort Your Favorite Ice Cream Toppings!</h2>
         <ul id="sortable">
             <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Chocolate</li>
@@ -21,7 +26,14 @@
         </ul>
     </div>
     
+    <div id="dpdiv">
+        <form>
+            <h2>When was the last time you had Ice Cream?</h2>
+            <input type="text" id="datepicker">
+        </form>
+    </div>
     
+</div>
     <script src="jquery-1.11.3.min.js"></script>
     <script src="jquery_ui/jquery-ui.min.js"></script>
     <script src="main.js"></script>
