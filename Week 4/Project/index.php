@@ -8,13 +8,6 @@
     <link href="jquery-ui-1.11.4.custom/jquery-ui.structure.min.css" rel="stylesheet">
     <link href="jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" rel="stylesheet">
 
-    <?php
-$myFile = "general.json";
-$fh = fopen($myFile, 'w') or die("can't open file");
-$stringData = $_GET["data"];
-fwrite($fh, $stringData);
-fclose($fh)
-?>
 </head>
 
 <body>
@@ -55,7 +48,6 @@ fclose($fh)
             </div>
         </div>
 
-        <button id="savebtn">Save</button>
 
     </div>
 
