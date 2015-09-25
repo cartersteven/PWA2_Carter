@@ -38,11 +38,38 @@ $(document).ready(function(){
           },750).animate;
           $(this).dialog('close');
         },
-        "cancel" : function() {
+        "Cancel" : function() {
           $(this).dialog('close');
         }
       }
-    });
+    });//End definition for dialog box
+
+    //Mark item as complete
+    $("#unfinishedList").on('click', '.done', function() {
+      var taskItem = $(this).parent('li');
+        taskItem.slideUp(250, function() {
+          var $this = $(this);
+            $this.detach();
+              $("#finishedList").prepend($this);
+                $this.slideDown();
+        });
+    });//End Mark Item as Complete
+
+    //Make lists Sortable
+    $(".sortlist").sortable({
+      connectWith : '.sortlist',
+      cursor : 'pointer',
+      placeholder : 'ui-state-highlight',
+      cancel : '.delete,.done'
+    });//End list sortable
+
+    //Delete
+    $("#sortlist").on('click', '.delete', function() {
+      $(this).parent('li').effect('puff', function() {
+        $(this).remove();
+      });
+    });//Delete
+
 
 
 });
