@@ -3,6 +3,13 @@ $(document).ready(function(){
     $("#newitemform").hide();
 
     //Start click event for add item button
+
+    $(".close").button({
+      icons: {
+        primary: "ui-icon-circle-close"
+      }
+    });
+
     $("#additem").button({
       icons: {
         primary: "ui-icon-circle-plus"
@@ -25,7 +32,7 @@ $(document).ready(function(){
           var taskName = $("#task").val();
           var dueDate = $("#date").val();
 
-          var beginLi = '<li><span class="done"></span><span class="delete">X</span>';
+          var beginLi = '<li><button class="done">Done</button><button class="delete">X</button>';
           var taskLi = '<span class="task">' + taskName + '</span>';
           var dateLi = '<span class="due-date">' + dueDate + '</span>';
           var endLi = '</li>';
@@ -44,6 +51,13 @@ $(document).ready(function(){
       }
     });//End definition for dialog box
 
+    $( "#unfinishedList, #finishedList" ).disableSelection();
+
+    $( "ul.droptrue" ).sortable({
+      connectWith: "ul",
+      dropOnEmpty: true
+    });
+
     //Mark item as complete
     $("#unfinishedList").on('click', '.done', function() {
       var taskItem = $(this).parent('li');
@@ -53,7 +67,20 @@ $(document).ready(function(){
               $("#finishedList").prepend($this);
                 $this.slideDown();
         });
-    });//End Mark Item as Complete
+    });//End Mark Item as complete
+
+    //Mark item as incomplete
+    $("#finishedList").on('click', '.done', function() {
+      var taskItem = $(this).parent('li');
+        taskItem.slideUp(250, function() {
+          var $this = $(this);
+            $this.detach();
+              $("#unfinishedList").prepend($this);
+                $this.slideDown();
+        });
+    });//End Mark Item as incomplete
+
+
 
     //Make lists Sortable
     $(".sortlist").sortable({
@@ -64,7 +91,7 @@ $(document).ready(function(){
     });//End list sortable
 
     //Delete
-    $("#sortlist").on('click', '.delete', function() {
+    $(".sortlist").on('click', '.delete', function() {
       $(this).parent('li').effect('puff', function() {
         $(this).remove();
       });

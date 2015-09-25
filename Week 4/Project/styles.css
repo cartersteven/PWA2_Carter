@@ -1,0 +1,56 @@
+header{
+  width:100%;
+}
+header button{
+    width: 300px;
+    margin: 2em -150px;
+    position: absolute;
+    left: 50%;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkcyan
+}
+
+#unfinished {
+    background-color: #fff;
+    margin: .5em;
+    width: 100%;
+    height: 250px;
+
+}
+li{
+  border: 1px solid black;
+}
+#main {
+    width: 75%;
+    margin: auto;
+}
+
+#finished {
+    background-color: #fff;
+    margin: .5em;
+    width: 100%;
+    height: 250px;
+}
+
+#container {
+    background-color: cyan;
+}
+
+body {
+    background-color: cyan;
+}
+.delete{
+    margin: 0em 1em;
+}
+.task{
+    margin: 0em 10em;
+}
+.done{
+
+}
+ul{
+    list-style-type: none;
+}
