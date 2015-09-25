@@ -10,14 +10,47 @@
 </head>
 
 <body>
-Content of the document......
+    <div id="container">
+        <header>
+          <!-- This button will open the modal -->
+          <button id="additem">Add an item to your list!</button>
+        </header>
 
-    
-    
-    
-<script src="jquery-1.11.3.min.js"></script>    
-<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-<script src="main.js"></script>
+        <div id="main">
+          <!-- This is the list of unfinished items -->
+          <div id="unfinished">
+            <h1>List of things left to do</h1>
+              <ul id="unfinishedList" class="sortlist">
+              </ul>
+          </div>
+
+          <!-- This list has all of the finished items -->
+          <div id="finished">
+            <h1>List of things left to do</h1>
+              <ul id="finishedList" class="sortlist">
+              </ul>
+          </div>
+
+
+          <!-- This is the code for the modal to add items -->
+          <form>
+            <p>
+              <label for="task">Task Name:</label>
+              <input type="text" name="task" id="task">
+            </p>
+            <p>
+              <label for="date">Due Date:</label>
+              <input type="text" name="date" id="date">
+            </p>
+
+        </div>
+    </div>
+
+
+
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
