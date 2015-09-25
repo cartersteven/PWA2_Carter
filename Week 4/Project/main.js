@@ -3,8 +3,6 @@ $(document).ready(function(){
     $("#newitemform").hide();
 
     //Start click event for add item button
-
-
     $("#additem").button({
       icons: {
         primary: "ui-icon-circle-plus"
@@ -34,7 +32,7 @@ $(document).ready(function(){
 
           $("#unfinishedList").prepend(beginLi + taskLi + dateLi + endLi);
           $("#unfinishedList").hide().slideDown(250).find('li:first').animate({
-            'background-color' : 'rgb(255,255,204)'
+            'background-color' : 'rgb(101,156,239)'
           },250).animate({
             'background-color' : 'white'
           },750).animate;
@@ -91,11 +89,5 @@ $(document).ready(function(){
         $(this).remove();
       });
     });//Delete
-
-    $('#savebtn').click(function() {
-                var saveit = $('#calendar').fullCalendar( 'clientEvents');
-
-        var eventsholded = [];
-
 
 });
