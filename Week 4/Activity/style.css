@@ -24,33 +24,22 @@
     top: 5em;
 }
 
-#modalactivate {
+#modalActivate {
     position: absolute;
     top: 3em;
     left: 5em;
+    padding: 1em;
 }
-#modal{
-  width: 350px;
-  background-color:#948C6F;
-  box-shadow: 0 0 10px #000;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin-top: 200px;
-  margin-left: -200px;
-  z-index: 1001;
-  display: none;
-  padding: 20px;
+
+.smallOr {
+    text-align: center;
+    font-size: .7em;
+    line-height: 0em;
 }
-#modal .close {
-  position: absolute;
-  right:5px;
-  top:5px;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  cursor: potinter;
+
+#adiv {
+    width: 600px;
+    position: relative;
+    left; 0em;
+    top: 7em;
 }

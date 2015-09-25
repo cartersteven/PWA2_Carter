@@ -10,10 +10,10 @@
     <link href="jquery_ui/jquery-ui.theme.min.css" rel="stylesheet">
 <body>
 <div id="container">
-    
+
    <h1>Favorite Ice Cream Flavors Worksheet</h1>
-    
-    <div id="dddiv"> 
+
+    <div id="dddiv">
        <h2>Sort Your Favorite Ice Cream Toppings!</h2>
         <ul id="sortable">
             <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Chocolate</li>
@@ -25,44 +25,61 @@
             <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Strawberry</li>
         </ul>
     </div>
-    
+
     <div id="dpdiv">
         <form>
             <h2>When was the last time you had Ice Cream?</h2>
             <input type="text" id="datepicker">
         </form>
     </div>
-    
-    <div id="">
-        
-    </div>
-    
-    
-    
-</div>
-    <button id="modalactivate" class="modalClick">Create an Account</button>
-      <div id="overlay">
-        <div id="modal">
-          <span class="close">X</span>
-          <h3 class="modaltop">Sign Up</h3>
-          <div>
-            <form>
-              <label for="newuser">Username </label><input name="newuser" type="text" id="newuser" title="Username">
-              <br />
-              <br />
-              <label for="newemail">Email </label><input name="newemail" type="email" id="newemail" title="New Email">
-              <br />
-              <br />
-              <label for="newpass">Password </label><input name="newpass" type="password" id="newpass" title="New Password">
-              <br />
-              <br />
-              <input type="submit">
-            </form>
-          </div>
-        </div>
-      </div>
 
-    
+    <div id="adiv">
+      <h3>Baked Alaska</h3>
+      <div>
+        <p>
+          A masterpiece of chemistry: ice cream, cake and meringue baked in the oven until the meringue browns. Ice cream, in a rectangle or  mounded in a pie plate, is covered on all sides with slices of sponge cake or pound cake, which is then covered with meringue. The entire dessert is then placed in a 425°F oven just long enough to firm the meringue—three or four minutes. The meringue is an effective insulator, and in the short cooking time needed to finish the dessert, it prevents the ice cream from melting. The concept was developed by the Chinese, who used pastry as the insulator; a Chinese delegation introduced it to Paris in the nineteenth century. The American physicist Benjamin Thompson then investigated the heat resistance of beaten egg whites, and, in 1804, demonstrated that beaten egg whites were a better insulator.
+        </p>
+        <p>
+          Baked Alaska. Photo by Monkey Business | Dreamstime.
+          The dish was named Omelette Surprise or Omelette à la Norvégienne, the Norwegian attribution owing to the “arctic” appearance and cold center. Delmonico’s Restaurant in New York City renamed it named Baked Alaska in honor of the newly acquired Alaska territory.
+        </p>
+      </div>
+      <h3>Banana Split</h3>
+      <div>
+        <p>
+            The traditional banana split is a type of ice cream sundae made in a long dish called a boat (hence the alternate term, banana boat). It was invented in 1904 by David Evans Strickler, a 23-year-old apprentice pharmacist at Tassel Pharmacy in Latrobe, Pennsylvania. The sundae originally cost 10 cents, twice the price of other sundaes, and caught on with students of nearby Saint Vincent College. In those pre-digital days, news of the nifty new sundae quickly spread by word of mouth and written correspondence. It must have done well for Strickler: He went on to buy the pharmacy, renaming it Strickler’s Pharmacy.
+        </p>
+      </div>
+      <h3>Ice Cream Cone</h3>
+      <div>
+        <p>
+An ice cream cone with a lighter texture, in a mold that creates a “cuff” at the top. It has less flavor than a sugar cone or a waffle cone and is generally served with less expensive ice cream.  It is made in both the cup style, with a flat bottom (see photo) and with a classic tapered (pointed) bottom.
+        </p>
+
+      </div>
+    </div>
+
+
+
+</div>
+    <button id="modalActivate">Login</button>
+
+<div id="dialog" title="Login">
+            <form>
+              <label for="newuser">Username </label><br /><input name="newuser" type="text" id="newuser" title="Username">
+              <br />
+              <br />
+                <p class="smallOr">-- Or --</p>
+              <label for="newemail">Email </label><br /><input name="newemail" type="email" id="newemail" title="New Email">
+              <br />
+              <br />
+              <label for="newpass">Password </label><br /><input name="newpass" type="password" id="newpass" title="New Password">
+              <br />
+              <br />
+              <input type="submit"> <input type="button" value="Cancel" id="modalCancel">
+            </form>
+</div>
+
     <script src="jquery-1.11.3.min.js"></script>
     <script src="jquery_ui/jquery-ui.min.js"></script>
     <script src="main.js"></script>

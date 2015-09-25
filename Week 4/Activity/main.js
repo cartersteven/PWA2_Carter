@@ -9,22 +9,15 @@ $(document).ready(function(){
     $( "#datepicker" ).datepicker();
 
     //Modal
-    $('.modalClick').on("click", function(e){
-        e.preventDefault();
-        $('#overlay')
-          .fadeIn()
-          .find('#modal')
-          .fadeIn();
-          console.log("open");
+    $( "#dialog" ).hide();
+    $("#modalActivate").on("click",function() {
+        $( "#dialog" ).dialog();
     });
-
-    $('.close').on('click', function(e){
-        e.preventDefault();
-        $('#overlay')
-          .fadeOut()
-          .find('#modal')
-          .fadeOut();
-          console.log("close");
+    $("#modalCancel").on("click",function() {
+        $( "#dialog" ).dialog( "close" );
     });
-
+    
+    //Accordion
+    $("#adiv").accordion();
+    
 });
