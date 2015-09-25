@@ -21,14 +21,14 @@
           <!-- This is the list of unfinished items -->
           <div id="unfinished">
             <h1>Still To-Do</h1>
-              <ul id="unfinishedList" class="sortlist droptrue">
+              <ul id="unfinishedList" class="sortlist">
               </ul>
           </div>
 
           <!-- This list has all of the finished items -->
           <div id="finished">
             <h1>Finished</h1>
-              <ul id="finishedList" class="sortlist droptrue">
+              <ul id="finishedList" class="sortlist">
               </ul>
           </div>
 
